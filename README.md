@@ -4,11 +4,11 @@ These are my shell configuration dotfiles. The primary goal is to increase CLI p
 # Inspirations
 The contents of this repo have been partly invented from scratch, partly inspired by open source projects, and partly refactored from snippets from colleagues and friends. Many are attributed.
 
-# Acquiring This Repo
-It is suggested that you clone this into your home directory.
-
-    cd ~
-    git clone  https://github.com/prajjwal1/dotfiles
+## Acquire the Repo
+```shell
+$ cd ~
+$ git clone https://github.com/prajjwal1/Scrabble
+```
 
 # Contributions
 Contributions are always welcome in the form of pull requests with explanatory comments.
