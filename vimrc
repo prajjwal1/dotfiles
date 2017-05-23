@@ -12,8 +12,11 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'google/vim-colorscheme-primary'
 Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Yggdroot/indentLine'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -25,6 +28,7 @@ set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab
 set autoindent
+set list lcs=tab:\|\
 set smartindent       " tabs are spaces
 set shiftwidth=4
 set number              " show line numbers
@@ -44,11 +48,8 @@ nnoremap <space> za
  set splitbelow
  set splitright
 
-
- " google colours 
- set t_Co=256
- " Quicker window movement
- nnoremap <C-j> <C-w>j
- nnoremap <C-k> <C-w>k
- nnoremap <C-h> <C-w>h
- nnoremap <C-l> <C-w>l
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
