@@ -7,7 +7,7 @@ The contents of this repo have been partly invented from scratch, partly inspire
 ## Acquire the Repo
 ```shell
 $ cd ~
-$ git clone https://github.com/prajjwal1/Scrabble
+$ git clone https://github.com/prajjwal1/dotfiles
 ```
 
 # Contributions

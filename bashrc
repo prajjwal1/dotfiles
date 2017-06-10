@@ -127,4 +127,6 @@ alias m='make'
 alias tlp='sudo tlp start'
 alias po='poweroff'
 alias p3='python3'
+alias jc='javac'
+alias j='java'
 export PATH="$PATH:/home/prajjwal/.local/bin"
