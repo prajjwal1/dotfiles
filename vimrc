@@ -1,10 +1,10 @@
-
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
+syntax on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/home/prajjwal/vundle')
+"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -12,10 +12,18 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+
 Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/AutoClose'
 Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdtree'
+
+" Color schemes
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+colorscheme molokai
+let g:rehash256 = 1
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -26,11 +34,7 @@ syntax enable           " enable syntax processing
 set autoindent      " autoindent on ( added by arjun later)
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
-set expandtab
-set autoindent
-set list lcs=tab:\|\
-set smartindent       " tabs are spaces
-set shiftwidth=4
+set expandtab       " tabs are spaces
 set number              " show line numbers
 set relativenumber	" turn on relative number
 set showcmd             " show last command in bottom bar
@@ -48,8 +52,29 @@ nnoremap <space> za
  set splitbelow
  set splitright
 
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+
+ " Quicker window movement
+ nnoremap <C-j> <C-w>j
+ nnoremap <C-k> <C-w>k
+ nnoremap <C-h> <C-w>h
+ nnoremap <C-l> <C-w>l
+
+ 
+ "check out github : tiev/tiev 
+ set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+ " Always show statusline
+ set laststatus=2
+ 
+map <C-n> :NERDTree<CR>
+
+let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+nnoremap <F5> :!make %:r && ./%:r<CR>
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Always show statusline
+ set laststatus=2
+
+ " Use 256 colours (Use this setting only if your terminal supports 256 colours)
+ set t_Co=256

@@ -129,4 +129,5 @@ alias po='poweroff'
 alias p3='python3'
 alias jc='javac'
 alias j='java'
+alias z='zsh'
 export PATH="$PATH:/home/prajjwal/.local/bin"
