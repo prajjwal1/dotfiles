@@ -18,17 +18,28 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/AutoClose'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+syntax enable
+set t_Co=256
+set background=dark
+colorscheme gruvbox
+
+let g:ycm_confirm_extra_conf = 0
 
 " Color schemes
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
-colorscheme molokai
 let g:rehash256 = 1
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+
 set nocompatible        " better (why ? ) needed for Vundle
 syntax enable           " enable syntax processing
 set autoindent      " autoindent on ( added by arjun later)
@@ -59,7 +70,7 @@ nnoremap <space> za
  nnoremap <C-h> <C-w>h
  nnoremap <C-l> <C-w>l
 
- 
+
  "check out github : tiev/tiev 
  set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
@@ -71,10 +82,9 @@ map <C-n> :NERDTree<CR>
 let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 nnoremap <F5> :!make %:r && ./%:r<CR>
+
 set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " Always show statusline
  set laststatus=2
 
- " Use 256 colours (Use this setting only if your terminal supports 256 colours)
- set t_Co=256
