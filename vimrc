@@ -28,7 +28,7 @@ Plugin 'plasticboy/vim-markdown'
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme gruvbox
+colorscheme molokai
 
 let g:ycm_confirm_extra_conf = 0
 

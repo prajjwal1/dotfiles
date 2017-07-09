@@ -95,11 +95,15 @@ alias m='make'
 alias tlp='sudo tlp start'
 alias po='poweroff'
 alias p3='python3'
+alias pt='sudo powertop'
 alias jc='javac'
 alias j='java'
+alias laptop='sudo pm-powersave'
+alias sas='sudo apt search'
 
 #Github
 alias gc="git clone"
+alias gs="git status"
 alias gp="git pull"
 alias gpu="git push"
 alias gc="git commit -m"
