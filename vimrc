@@ -36,6 +36,9 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+""""""""  For python
+Plugin 'nvie/vim-flake8'
 
 
 call vundle#end()
@@ -110,6 +113,7 @@ nnoremap <space> za
 
 
 let g:ycm_confirm_extra_conf = 0
+let python_highlight_all=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Color schemes
