@@ -83,7 +83,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias g++="g++ -std=c++11"
+alias g++="g++ -std=c++14"
 alias e='exit'
 alias c='clear'
 alias sai='sudo apt install'
