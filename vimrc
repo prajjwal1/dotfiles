@@ -29,6 +29,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Konfekt/FastFold'
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+
+
 call vundle#end()            " required
 
 filetype plugin indent on
@@ -49,4 +53,3 @@ setlocal foldmethod=expr
 au BufNewFile,BufRead *.js,*.html,*.css: set tabstop=2 softtabstop=2 shiftwidth=2
 set list
 set listchars=tab:>-
-
