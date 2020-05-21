@@ -19,7 +19,8 @@ set mouse+=a
 set t_Co=256
 
 set foldcolumn=3
-
+set ic
+set hls is
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -42,6 +43,7 @@ syntax on
 set encoding=utf-8
 set pastetoggle=<F10>
 set expandtab
+let mapleader=","
 
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=119 expandtab autoindent fileformat=unix
 au BufNewFile,BufRead *.cpp set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=119 expandtab autoindent fileformat=unix
@@ -53,3 +55,5 @@ setlocal foldmethod=expr
 au BufNewFile,BufRead *.js,*.html,*.css: set tabstop=2 softtabstop=2 shiftwidth=2
 set list
 set listchars=tab:>-
+set clipboard=unnamedplus
+map <C-n> :NerdTreeToggle<CR>
