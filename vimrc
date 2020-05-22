@@ -30,7 +30,7 @@ Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            " required
 
@@ -48,7 +48,7 @@ setlocal foldmethod=expr
 set list
 set listchars=tab:>-
 set clipboard=unnamedplus
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>  " Invoke NERDTree with C-n
 
 "Theme
 colorscheme codedark
