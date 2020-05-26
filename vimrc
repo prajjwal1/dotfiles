@@ -11,7 +11,14 @@ set smartcase
 set incsearch
 set noerrorbells visualbell t_yb=
 set nocompatible
+set autoindent
+set complete-=i
+set smarttab
+set ruler
+set wildmenu
+set autoread
 filetype off
+
 
 "set ttyfast
 set mouse+=a
@@ -24,13 +31,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'mhartington/oceanic-next'
 Plugin 'preservim/nerdtree'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'jeetsukumaran/vim-indentwise'
+Plugin 'tomasr/molokai'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'kien/ctrlp.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 
@@ -38,7 +48,7 @@ filetype plugin indent on
 let g:SimplyFold_docstring_preview=1
 let python_highlight_all=1
 syntax on
-set encoding=utf-8
+set encoding=UTF-8
 set pastetoggle=<F10>
 set expandtab
 let mapleader=","
@@ -50,5 +60,62 @@ set listchars=tab:>-
 set clipboard=unnamedplus
 map <C-n> :NERDTreeToggle<CR>  " Invoke NERDTree with C-n
 
-"Theme
-colorscheme codedark
+let g:molokai_original=1
+
+" Theme
+ syntax enable
+" for vim 7
+ set t_Co=256
+
+" for vim 8
+ if (has("termguicolors"))
+  set termguicolors
+ endif
+
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext' 
+
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif

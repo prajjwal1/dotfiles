@@ -8,7 +8,7 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -66,10 +66,9 @@ plugins=(
   git
   colorize
   sudo
-  #vi-mode
+  vi-mode
   tmux
   colored-man-pages
-  python
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
@@ -112,3 +111,6 @@ alias weather="curl wttr.in/bangalore"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+autoload -U promptinit; promptinit
+prompt pure
