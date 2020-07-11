@@ -17,6 +17,7 @@ set smarttab
 set ruler
 set wildmenu
 set autoread
+set cursorline
 filetype off
 
 
@@ -41,6 +42,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-fugitive'
+Plugin 'psf/black'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()            " required
 
@@ -62,60 +65,8 @@ map <C-n> :NERDTreeToggle<CR>  " Invoke NERDTree with C-n
 
 let g:molokai_original=1
 
-" Theme
- syntax enable
-" for vim 7
- set t_Co=256
-
-" for vim 8
- if (has("termguicolors"))
-  set termguicolors
- endif
-
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext' 
 
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
 set display+=lastline
-
-if &encoding ==# 'latin1' && has('gui_running')
-  set encoding=utf-8
-endif
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-set display+=lastline
-
-if &encoding ==# 'latin1' && has('gui_running')
-  set encoding=utf-8
-endif
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-set display+=lastline
-
-if &encoding ==# 'latin1' && has('gui_running')
-  set encoding=utf-8
-endif
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-set display+=lastline
-
-if &encoding ==# 'latin1' && has('gui_running')
-  set encoding=utf-8
-endif
+autocmd BufWritePre *.py execute ':Black'
