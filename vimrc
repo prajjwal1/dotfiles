@@ -1,4 +1,4 @@
-s<a href="https://github.com/prajjwal1/fluence/wiki"><img alt="Documentation Status" src="https://readthedocs.org/projects/fairseq/badge/?version=latest" /></a></a>yntax on
+syntax on
 set shortmess+=I
 set number
 set relativenumber
@@ -37,8 +37,6 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-fugitive'
 Plugin 'psf/black'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'preservim/nerdcommenter'
@@ -64,14 +62,6 @@ let mapleader=","
 " NERDCommenter Specific
 let g:NERDSpaceDelims=1
 let g:NERDTrimTrailingWhiteSpace=1
-
-"Vim fugitive
-nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
-nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>gb :Git branch<Space>
-nnoremap <space>go :Git checkout<Space>
 
 setlocal foldmethod=expr
 
